@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <script src="/static/javascripts/register.js"></script>
+    <link rel="stylesheet" href="/static/stylesheets/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-brand">
+        <span>Final</span>
+    </div>
+</nav>
+
+<div class="register-div">
+<h1>User Registration</h1>
+<% if (message) { %>
+    <div class="message">
+        Пользователь с ником "<%=message%>" уже существует.
+    </div>
+<% } %>
+<br>
+<form id="registerForm" action="/register" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required><br>
+
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName"><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName"><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age"><br>
+
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country"><br>
+
+    <label for="gender">Gender:</label>
+    <input type="text" id="gender" name="gender"><br>
+
+    <button type="submit">Register</button>
+</form>
+<br>
+<a href="/login">Back to Login</a>
+</div>
+</body>
+</html>

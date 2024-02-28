@@ -1,0 +1,76 @@
+body {
+    padding: 0;
+    margin: 0;
+    padding-bottom:50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#carousels{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:30px;
+}
+
+.carousel-wrapper {
+    text-align: center;
+    max-width: 400px;
+    background-color: peachpuff;
+    padding: 3px;
+}
+
+.carousel-wrapper img {
+    object-fit: fill;
+    max-width: 100%;
+    height: 400px;
+}
+
+.navbar{
+    display: flex;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    background-color: darkseagreen;
+}
+
+.navbar-brand{
+    margin-right: auto;
+}
+
+.navbar-menu{
+    margin-left: auto;
+}
+
+.navbar-welcome{
+    margin-right: 15vw;
+}
+
+.chart-links{
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.register-div, .login-div {
+    margin: auto;
+    margin-top:30vh;
+    width: fit-content;
+    padding: 30px;
+    background-color: peachpuff;
+}
+
+.form-add input, .form-edit input, .form-add textarea, .form-edit textarea{
+    width: 300px;
+}
+
+.form-add, .form-edit{
+    margin: auto;
+    margin-top:30vh;
+    width: fit-content;
+    padding: 30px;
+    background-color: peachpuff;
+}

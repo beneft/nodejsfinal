@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="/static/stylesheets/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="navbar-brand">
+    <span>Final</span>
+  </div>
+  <div class="navbar-menu">
+    <% if (user) { %>
+    <span class="navbar-welcome">Welcome, <%= user.username %></span>
+    <% if (user.role === 'admin') { %>
+    <a href="/adminpanel">Admin Panel</a><span> | </span>
+    <% } %>
+      <% } %>
+      <a href="/logout">Logout</a>
+  </div>
+</nav>
+<input type="hidden" id="user" value="<%= JSON.stringify(user) %>">
+
+<div class="chart-links">
+  <a href="/crypto">Crypto Chart</a>
+  <a href="/area">Country Areas Chart</a>
+  <a href="/stock">Stock Market Prices of Google</a>
+</div>
+
+<div id="carousels">
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="/static/javascripts/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/javascripts/additem.js"></script>
+    <link rel="stylesheet" href="/static/stylesheets/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-brand">
+        <span>Final</span>
+    </div>
+    <div class="navbar-menu">
+        <a href="/">Back</a>
+    </div>
+</nav>
+<div class="form-add">
+<h1>Add New Page Item</h1>
+<form id="addItemForm" action="/additem" method="POST">
+    <label for="image1">Image 1</label><br>
+    <input type="text" id="image1" name="image1" required><br><br>
+    <label for="image2">Image 2</label><br>
+    <input type="text" id="image2" name="image2" required><br><br>
+    <label for="image3">Image 3</label><br>
+    <input type="text" id="image3" name="image3" required><br><br>
+
+    <label for="title_en">Title (English)</label><br>
+    <input type="text" id="title_en" name="title_en" required><br><br>
+
+    <label for="title_ru">Title (Russian)</label><br>
+    <input type="text" id="title_ru" name="title_ru" required><br><br>
+
+    <label for="description_en">Description (English)</label><br>
+    <textarea id="description_en" name="description_en" rows="4" required></textarea><br><br>
+
+    <label for="description_ru">Description (Russian)</label><br>
+    <textarea id="description_ru" name="description_ru" rows="4" required></textarea><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>
